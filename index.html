@@ -14,5 +14,15 @@
 <b>Storage Config</b>
 /etc/pve/storage.cfg</pre>
 
+  <h2>fwupdmgr NOTES</h2>
+  <br>
+  <pre>
+    fwupdmgr may give errors that there was no efi mount found
+    <li>df -h                    <---get efi mount</li>
+    <li>nano /etc/fwupd/daemon.conf</li>
+    <li>Esplocation=/boot/efi    <---add efi mount location</li>
+    <li>systemctl restart fwupd.service</li>
+    <li>Re-Run fwupdmgr</li>
+  </pre>
 </body>
 </html>
